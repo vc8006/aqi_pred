@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
 from .models import Data , Data_Predicted ,Update
 from datetime import date
 import datetime
@@ -19,8 +21,11 @@ df_pred = pd.DataFrame(m)
 df_pred['Date'] = pd.to_datetime(df_pred['Date'])
 df_pred = df_pred.set_index(df_pred['Date']) 
 
+from sklearn.metrics import mean_squared_error
+import statsmodels.graphics.tsaplots as sgt
 
 from statsmodels.tsa.arima_model import ARIMA
+df = df_pred
 size =  int(len(df)*0.8)
 df_train = df.iloc[:size]
 df_test = df.iloc[size:]
@@ -28,8 +33,8 @@ df_test = df.iloc[size:]
 # u = Update.objects.get(name = "")
 u = Update.objects.all().values()
 
-date1 = [2274]
-date2 = [2275]
+date1 = [2555]
+date2 = [2556]
 def fun(df):
     dfa = df['AQI']
     df = df.dropna()
