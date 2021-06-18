@@ -1,3 +1,13 @@
+Built a flutter app for Android and ios Which predicts AQI and other pollutants such as NO2,SO2 etc of Delhi pto next 7 days.
+
+![screenshot](fapps.png)  ![screenshot](mainf.png)
+
+1. Used API from my own built website AQI Pred delhi 
+2. Search date option by which one can see data for last 5 years 
+3. Implemented Syncfusion charts to visualize last 30 days AQI 
+
+
+
 ![screenshot](ssmain.png)
 
 It is not an unknown fact that air pollution will endanger human health and life in big
